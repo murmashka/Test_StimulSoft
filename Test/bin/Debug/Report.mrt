@@ -1,0 +1,465 @@
+{
+  "ReportVersion": "2024.1.3.0",
+  "ReportGuid": "4b392fbca50b49c8a545687c51c07d75",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportCreated": "/Date(1706019827059+0500)/",
+  "ReportChanged": "/Date(1706020009070+0500)/",
+  "EngineVersion": "EngineV2",
+  "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class Report : Stimulsoft.Report.StiReport\r\n    {\r\n        public Report()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n        #endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
+  "ReferencedAssemblies": {
+    "0": "System.Dll",
+    "1": "System.Drawing.Dll",
+    "2": "System.Windows.Forms.Dll",
+    "3": "System.Data.Dll",
+    "4": "System.Xml.Dll",
+    "5": "Stimulsoft.Controls.Dll",
+    "6": "Stimulsoft.Base.Dll",
+    "7": "Stimulsoft.Report.Dll"
+  },
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "root",
+        "Alias": "root",
+        "Key": "24c1dce0324f4c2490e423146efb9042",
+        "Columns": {
+          "0": {
+            "Name": "name",
+            "Index": -1,
+            "NameInSource": "name",
+            "Alias": "name",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "phoneNumber",
+            "Index": -1,
+            "NameInSource": "phoneNumber",
+            "Alias": "phoneNumber",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "email",
+            "Index": -1,
+            "NameInSource": "email",
+            "Alias": "email",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "address",
+            "Index": -1,
+            "NameInSource": "address",
+            "Alias": "address",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "userAgent",
+            "Index": -1,
+            "NameInSource": "userAgent",
+            "Alias": "userAgent",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "hexcolor",
+            "Index": -1,
+            "NameInSource": "hexcolor",
+            "Alias": "hexcolor",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "test.root"
+      },
+      "1": {
+        "Ident": "StiDataTableSource",
+        "Name": "root2",
+        "Alias": "root2",
+        "Key": "758d7a0051494e69992a609579be8f50",
+        "Columns": {
+          "0": {
+            "Name": "name",
+            "Index": -1,
+            "NameInSource": "name",
+            "Alias": "name",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "phoneNumber",
+            "Index": -1,
+            "NameInSource": "phoneNumber",
+            "Alias": "phoneNumber",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "email",
+            "Index": -1,
+            "NameInSource": "email",
+            "Alias": "email",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "address",
+            "Index": -1,
+            "NameInSource": "address",
+            "Alias": "address",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "userAgent",
+            "Index": -1,
+            "NameInSource": "userAgent",
+            "Alias": "userAgent",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "hexcolor",
+            "Index": -1,
+            "NameInSource": "hexcolor",
+            "Alias": "hexcolor",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "test2.root"
+      },
+      "2": {
+        "Ident": "StiDataTableSource",
+        "Name": "root3",
+        "Alias": "root3",
+        "Key": "27adb24193b0498c98b789465d54bad8",
+        "Columns": {
+          "0": {
+            "Name": "name",
+            "Index": -1,
+            "NameInSource": "name",
+            "Alias": "name",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "phoneNumber",
+            "Index": -1,
+            "NameInSource": "phoneNumber",
+            "Alias": "phoneNumber",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "email",
+            "Index": -1,
+            "NameInSource": "email",
+            "Alias": "email",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "address",
+            "Index": -1,
+            "NameInSource": "address",
+            "Alias": "address",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "userAgent",
+            "Index": -1,
+            "NameInSource": "userAgent",
+            "Alias": "userAgent",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "hexcolor",
+            "Index": -1,
+            "NameInSource": "hexcolor",
+            "Alias": "hexcolor",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "test3.root"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiJsonDatabase",
+        "Name": "test",
+        "Alias": "test",
+        "PathData": "C:\\Users\\maria\\Desktop\\test.json",
+        "HeadersString": ""
+      },
+      "1": {
+        "Ident": "StiJsonDatabase",
+        "Name": "test2",
+        "Alias": "test2",
+        "PathData": "C:\\Users\\maria\\Desktop\\test.json",
+        "HeadersString": ""
+      },
+      "2": {
+        "Ident": "StiJsonDatabase",
+        "Name": "test3",
+        "Alias": "test3",
+        "PathData": "C:\\Users\\maria\\Desktop\\test.json",
+        "HeadersString": ""
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "261e4d3fe1174c64a566306f3446bfed",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiTable",
+          "Name": "Tableroot",
+          "ClientRectangle": "0,0.4,19,1.6",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell1",
+              "ClientRectangle": "0,0,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "name"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 0
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell2",
+              "ClientRectangle": "3.2,0,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "phoneNumber"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 1
+            },
+            "2": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell3",
+              "ClientRectangle": "6.4,0,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "email"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 2
+            },
+            "3": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell4",
+              "ClientRectangle": "9.6,0,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "address"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 3
+            },
+            "4": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell5",
+              "ClientRectangle": "12.8,0,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "userAgent"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 4
+            },
+            "5": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell6",
+              "ClientRectangle": "16,0,3,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "hexcolor"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 5
+            },
+            "6": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell7",
+              "ClientRectangle": "0,0.8,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.name}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 6
+            },
+            "7": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell8",
+              "ClientRectangle": "3.2,0.8,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.phoneNumber}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 7
+            },
+            "8": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell9",
+              "ClientRectangle": "6.4,0.8,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.email}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 8
+            },
+            "9": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell10",
+              "ClientRectangle": "9.6,0.8,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.address}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 9
+            },
+            "10": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell11",
+              "ClientRectangle": "12.8,0.8,3.2,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.userAgent}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 10
+            },
+            "11": {
+              "Ident": "StiTableCell",
+              "Name": "Tableroot_Cell12",
+              "ClientRectangle": "16,0.8,3,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.hexcolor}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 11
+            }
+          },
+          "MinHeight": 0.4,
+          "DataSourceName": "root",
+          "RowCount": 2,
+          "ColumnCount": 6,
+          "HeaderRowsCount": 1,
+          "NumberID": 12
+        }
+      },
+      "PageWidth": 21.0,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1.0,
+        "Right": 1.0,
+        "Top": 1.0,
+        "Bottom": 1.0
+      }
+    }
+  }
+}
